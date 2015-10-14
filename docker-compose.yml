@@ -1,0 +1,5 @@
+main:
+  build: .
+  ports:
+    - 80:80
+    - 443
