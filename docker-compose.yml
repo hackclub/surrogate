@@ -3,3 +3,5 @@ main:
   ports:
     - 80:80
     - 443
+  volumes:
+    - ./conf:/usr/local/nginx/conf
