@@ -4,6 +4,10 @@ machine:
 
 test:
   override:
+    - docker run -v $(pwd):/app hackclub/markcop:latest:
+        parallel: true
+        files:
+          - "**.md"
     - docker build -t surrogate-hackclub .
     - docker run -d -p 8080:8080 -e PORT=8080 surrogate-hackclub; sleep 10
     - curl --retry 10 --retry-delay 5 -v http://localhost:8080
