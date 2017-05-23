@@ -26,9 +26,12 @@ RUN ln -s /usr/local/nginx/sbin/nginx /usr/local/bin/nginx
 # Clean up the build
 RUN rm -rf /tmp/nginx
 
-# Let's replace the default configuration with ours
+# Install our own scripts
 WORKDIR /
+COPY bin/* /usr/local/bin/
+
+# Let's replace the default configuration with ours
 COPY conf /usr/local/nginx/conf
 
 # And we should be good to go!
-CMD ["nginx"]
+CMD ["nginx_setup"]
