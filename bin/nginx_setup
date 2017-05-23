@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Use the port provided by Heroku
+cat /usr/local/nginx/conf/conf.d/default.conf | mo > /usr/local/nginx/conf/conf.d/default.conf
+
+nginx
