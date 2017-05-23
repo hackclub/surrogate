@@ -6,7 +6,7 @@ Surrogate is an HTTP proxy that we use to bypass school networks in our workshop
 
 ## Configuration
 
-Make sure you have the following env variables set up in CircleCI
+Make sure you have the following environmental variables set up in CircleCI:
 
 ```shell
 HEROKU_EMAIL # Your Heroku account's email
